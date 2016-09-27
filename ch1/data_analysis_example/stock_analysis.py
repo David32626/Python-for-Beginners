@@ -1,5 +1,4 @@
 # pandas module
-
 import pandas as pd
 
 def get_mean_tv_cp(symbol):
