@@ -3,7 +3,6 @@ import webbrowser
 class Music():
     """
     This class provides a way to store music information 
-    hello
     """
     VALID_RATINGS = ["A", "B", "C"]
 
