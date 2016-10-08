@@ -13,6 +13,8 @@ numbers[1]
 numbers[2] = 'hello python'
 print (numbers)
 
+numbers = [[1,2,3],[4,5,6]]
+
 students = []
 students.append(['David', 123, True])
 students.append(['Hubert', 321, False])
