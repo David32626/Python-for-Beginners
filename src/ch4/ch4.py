@@ -44,10 +44,12 @@ name[::-1]
 '''
 Set example
 '''
-students = set()
-students.add('David')
-students.add('Hubert')
-students.remove('David')
+Warriors = set()
+Warriors.add('Curry')
+Warriors.add('Thompson')
+Warriors.add('Durant')
+Warriors.remove('Durant')
+
 print ('David' in students)
 {'Hubert', 'David', 'Kobe'}
 #{{'Hubert', 'David', 'Kobe'}}
@@ -68,6 +70,8 @@ print (name, student_id)
 '''
 Dict example
 '''
+Warriors = {"Curry":"G","Green":"F","Durant":"F"}
+
 students = {'David' : 1, 'Hubert' : 2, 'Kobe' : 3}
 students['David']
 students['Hubert'] = 5
