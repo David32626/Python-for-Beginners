@@ -1,20 +1,71 @@
 '''
-Function example
+Default argument
 '''
-# ((a + b) * c) / d
-def compute(a, b, c, d):
-    return ((a + b) * c) / d
+def hello(name="David"):
+    print("Hello,",name)
 
-print (compute(2, 2, 2, 2))
+hello()
+hello("John")
+
+'''
+關鍵字引數
+'''
+def student(name,age,score):
+    print(name,"is",age,"years old, and got",score,"scores.")
+
+student("David",18,90)
+student(name="John",age=20,score=100)
+
+'''
+不定參數
+'''
+def sum(*num):
+    total = 0
+    for n in num:
+        total += n
+    return total
+
+print("sum = ",sum(1,2,3,4,5,6))
+
+'''
+不定關鍵字引數
+'''
+def sum(**scores):
+    total = 0
+    for subject, score in scores.items():
+        print(subject,"is",score)
+        total += score
+    return total
+
+print("Total score = ",sum(Chinses=88,English=70,math=85,Science=95,Social=76))
+
+'''
+Full arguments
+'''
+def some(a,b=0,*c,**d):
+    print("a =",a)
+    print("b =",b)
+    print("c =",c)
+    print("d =",d)
+
+some(10,20,30,40,name="David",age=18)
+
 
 '''
 Recursive example
 '''
-def factorial(n):
+def factorial_rec(n):
     if n > 1:
-        return n * factorial(n - 1)
+        return n * factorial_rec(n - 1)
     else:
         return 1
+
+
+def factorial(n):
+    ans = 1
+    for i in range(1,n+1):
+        ans *= i
+    return ans
 
 def fibonacci(n):
     if n >1 :
@@ -24,6 +75,27 @@ def fibonacci(n):
 
 print (factorial(3))
 print (fibonacci(3))
+
+'''
+Pass by value, pass by reference
+'''
+def foo(a):
+    print(id(a))
+    a += 1
+
+num = 1
+print(id(num))
+foo(num)
+print(num)
+
+def foo(a):
+    print(id(a))
+    a.append(1)
+
+aList = []
+print(id(aList))
+foo(aList)
+print(aList)
 
 '''
 Function overloading example
