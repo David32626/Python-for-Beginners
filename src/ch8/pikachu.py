@@ -4,30 +4,32 @@ Class example
 '''
 class Pikachu:
     def __init__(self, poke_name, poke_type, poke_weight, poke_height, poke_cp, poke_hp):
-        self.poke_name = poke_name
-        self.poke_type = poke_type
-        self.poke_weight = poke_weight
-        self.poke_height = poke_height
-        self.poke_cp = poke_cp
-        self.poke_hp = poke_hp
+        self.name = poke_name
+        self.type = poke_type
+        self.weight = poke_weight
+        self.height = poke_height
+        self.cp = poke_cp
+        self.hp = poke_hp
 
     def first_skill(self):
         print ('Thunder Shock')
-        return ('Thunder Shock', 3)
+        self.second_skill()
+        return 60
 
     def second_skill(self):
         print ('Thunder')
-        return ('Thunder', 100)
+        return 100
 
 def main():
-    pikachu = Pikachu('pikachu', 'Eletric', 30, 30, 30, 30)
-    print (pikachu.poke_name)
+    pikachu = Pikachu('pika', 'Eletric', 30, 30, 300, 100)
+    print ("name = ",pikachu.name)
+    print ("cp = ",pikachu.cp)
     pikachu.first_skill()
     pikachu.second_skill()
-    pikachu.poke_name = 'hello'
-    pikachu.poke_cp = 1000
-    print (pikachu.poke_name)
-    print (pikachu.poke_cp)
+    pikachu.name = 'chu'
+    pikachu.cp = 1000
+    print ("name = ",pikachu.name)
+    print ("cp = ",pikachu.cp)
 
 if __name__ == '__main__':
     main()
