@@ -1,11 +1,11 @@
 {
-    "name": "kobe",
-    "championshio": [
+    "name": "Kobe",
+    "championship": [
         1999,
         2000,
         2001,
         2008,
         2009
     ],
-    "age": "38"
+    "age": 38
 }

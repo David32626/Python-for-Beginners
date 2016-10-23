@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<score>
+    <student name="David">
+        <Chinese>82</Chinese>
+        <Math>80</Math>
+        <Science>89</Science>
+    </student>
+    <student name="Hubert">
+        <Chinese>70</Chinese>
+        <Math>78</Math>
+        <Science>91</Science>
+    </student>
+    <student name="Tom">
+        <Chinese>75</Chinese>
+        <Math>92</Math>
+        <Science>83</Science>
+    </student>
+</score>
