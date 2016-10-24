@@ -87,3 +87,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Final project data
+/src/ch12/data
+C-B0024-001.xml
+C-B0024-002.xml
