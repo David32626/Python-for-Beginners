@@ -56,7 +56,8 @@ class WeatherAnalyzer():
 
     def plot_rainfall(self):
         n_groups = 12
-        fig, ax = plt.subplots()
+
+        # index = [ 0  1  2  3  4  5  6  7  8  9 10 11]
         index = np.arange(n_groups)
 
         bar_width = 0.35
@@ -73,12 +74,15 @@ class WeatherAnalyzer():
                             ,align="center",color="r",label="Kaohsiung",alpha=opacity)
         plt.legend()
 
-        plt.tight_layout()
         plt.show()
 
 
 def main():
-    input_file = sys.argv[1]
+    try:
+        input_file = sys.argv[1]
+    except IndexError as e:
+        print("[Usage] python WeatherAnalyzer.py input\\weather_data.json")
+        return
     analyzer = WeatherAnalyzer()
     analyzer.load_json(input_file)
     analyzer.analyze_data()
