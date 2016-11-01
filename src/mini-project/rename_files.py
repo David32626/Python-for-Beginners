@@ -2,7 +2,7 @@ import os
 
 def rename_files():
     # get file names from a folder
-    file_list = os.listdir(r"")
+    file_list = os.listdir()
     saved_path = os.getcwd()
     print ("current working directory is " + saved_path)
     os.chdir()
