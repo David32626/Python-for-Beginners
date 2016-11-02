@@ -1,4 +1,6 @@
-# import standard module
+# python standard module
+import sys
+import json
 from datetime import datetime, timedelta
 
 # numpy module
@@ -6,9 +8,6 @@ import numpy as np
 
 # matplotlib module
 import matplotlib.pyplot as plt
-
-import sys
-import json
 
 class WeatherAnalyzer():
     def __init__(self):

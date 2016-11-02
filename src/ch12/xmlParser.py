@@ -1,4 +1,4 @@
-# import standard module
+# python standard module
 import xml.etree.ElementTree as ET
 
 import sys
