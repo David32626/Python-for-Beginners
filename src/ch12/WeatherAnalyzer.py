@@ -10,12 +10,13 @@ import matplotlib.pyplot as plt
 import sys
 import json
 
+
 class WeatherAnalyzer():
     def __init__(self):
         self.data = {}
         self.location_rainfall_list = {}
 
-    def load_json(self,input_file):
+    def load_json(self, input_file):
         jsonFile = open(input_file, encoding='utf8')
         self.data = json.load(jsonFile)
         jsonFile.close()
@@ -29,11 +30,12 @@ class WeatherAnalyzer():
             for hour in self.data[location]:
                 dt = self.parse_time(hour["time"])
                 if dt.month == current_month:
-                    if hour["rainfall"] == "T": # rainfall less than 0.1mm
+                    if hour["rainfall"] == "T":  # rainfall less than 0.1mm
                         continue
                     monthly_rainfall += float(hour["rainfall"])
                 else:
-                    self.location_rainfall_list[location].append(monthly_rainfall)
+                    self.location_rainfall_list[
+                        location].append(monthly_rainfall)
                     current_month += 1
                     if current_month > 12:
                         current_month -= 12
@@ -67,15 +69,15 @@ class WeatherAnalyzer():
         plt.title("Rainfall per month")
         plt.xlabel("Month")
         plt.ylabel("Rainfall per month(mm)")
-        plt.xticks(index,("201509","10","11","12","201601","02","03","04","05","06","07","08"))
-        taipei_rect = plt.bar(left=index,height=tuple(self.location_rainfall_list["Taipei"]),width=bar_width\
-                            ,align="center",color="b",label="Taipei",alpha=opacity)
-        kaohsiung_rect = plt.bar(left=index+bar_width,height=tuple(self.location_rainfall_list["Kaohsiung"]),width=bar_width\
-                            ,align="center",color="r",label="Kaohsiung",alpha=opacity)
+        plt.xticks(index, ("201509", "10", "11", "12", "201601",
+                           "02", "03", "04", "05", "06", "07", "08"))
+        plt.bar(left=index, height=tuple(self.location_rainfall_list[
+                "Taipei"]), width=bar_width, align="center", color="b", label="Taipei", alpha=opacity)
+        kaohsiung_rect = plt.bar(left=index + bar_width, height=tuple(self.location_rainfall_list[
+                                 "Kaohsiung"]), width=bar_width, align="center", color="r", label="Kaohsiung", alpha=opacity)
         plt.legend()
 
-        plt.show()
-
+        plt.show()    
 
 def main():
     try:
@@ -87,6 +89,7 @@ def main():
     analyzer.load_json(input_file)
     analyzer.analyze_data()
     analyzer.plot_rainfall()
+
 
 if __name__ == '__main__':
     main()
