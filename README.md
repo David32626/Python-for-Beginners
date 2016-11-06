@@ -19,3 +19,6 @@
 * CH 10. 例外處理
 * CH 11. 測試
 * CH 12. 實務專題
+* CH 13. Python IDE 介紹
+* CH 14. Git教學
+* CH 15. GitHub教學
