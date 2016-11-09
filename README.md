@@ -1,5 +1,6 @@
 # Pycone松果城市
 * [網站連結](http://www.pycone.com/)
+* [粉絲專頁](https://www.facebook.com/pycone2016/)
 
 ## 初心者-Python入門
 * [課程連結](https://hahow.in/cr/python-for-beginners)
