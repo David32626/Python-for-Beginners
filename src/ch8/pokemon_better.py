@@ -17,7 +17,7 @@ class Pokemon:
         return self.name
     
     def set_name(self, poke_name):
-        self.__name = poke_name
+        self.name = poke_name
 
     def get_hp(self):
         return self.__hp

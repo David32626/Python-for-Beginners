@@ -16,7 +16,7 @@ class Vaporeon:
         return self.name
     
     def set_name(self, poke_name):
-        self.__name = poke_name
+        self.name = poke_name
 
     def get_cp(self):
         return self.__cp
@@ -45,7 +45,7 @@ class Flareon:
         return self.name
     
     def set_name(self, poke_name):
-        self.__name = poke_name
+        self.name = poke_name
 
     def get_cp(self):
         return self.__cp
